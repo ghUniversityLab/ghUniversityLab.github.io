@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /privacy.html
+Disallow: /protocol.html
+
+# ⚠️ 部署前请把域名换成你的真实域名
+Sitemap: https://ghuniversitylab.github.io/sitemap.xml
