@@ -1,165 +1,268 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>手持弹幕 LED Banner · 隐私政策 / Privacy Policy</title>
-<meta name="description" content="手持弹幕（LED Banner）隐私政策，说明个人信息的收集、使用、保护与用户权利。">
-<meta name="theme-color" content="#2f6feb">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Crect width='28' height='28' rx='7' fill='%232f6feb'/%3E%3Crect x='5' y='9.5' width='4' height='9' rx='1.2' fill='%23fff'/%3E%3Crect x='11' y='9.5' width='4' height='9' rx='1.2' fill='%23fff' opacity='.72'/%3E%3Crect x='17' y='9.5' width='6' height='9' rx='1.2' fill='%23fff'/%3E%3C/svg%3E">
-<style>
-*,*::before,*::after{box-sizing:border-box}
-:root{
-  --bg:#f6f7f9; --card:#ffffff; --text:#1c1f23; --muted:#5d646e;
-  --line:#e3e6ea; --accent:#2f6feb; --accent-soft:#eaf1fe;
-  --ph-bg:#fff7e6; --ph-line:#e0a32e; --ph-text:#8a5b00;
-  --shadow:0 1px 2px rgba(16,24,40,.04),0 8px 24px rgba(16,24,40,.06);
-}
-@media (prefers-color-scheme:dark){
-  :root{--bg:#14161a;--card:#1c1f24;--text:#e8eaed;--muted:#a2a9b4;--line:#2c3138;
-        --accent:#6c9bff;--accent-soft:#1f2a3d;--ph-bg:#33280f;--ph-line:#a97d1f;--ph-text:#e8c477;
-        --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);}
-}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--text);
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",Roboto,Helvetica,Arial,sans-serif;
-  line-height:1.9;font-size:16px}
-header{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
-@supports (backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px)){
-  header{background:rgba(246,247,249,.86);-webkit-backdrop-filter:saturate(180%) blur(12px);backdrop-filter:saturate(180%) blur(12px)}
-  @media (prefers-color-scheme:dark){header{background:rgba(20,22,26,.86)}}
-}
-.hd{max-width:860px;margin:0 auto;padding:12px 20px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15px;letter-spacing:.2px;text-decoration:none;color:inherit}
-.brand svg{flex:none;border-radius:7px}
-.brand small{font-weight:500;color:var(--muted);font-size:12px}
-.spacer{flex:1 1 auto}
-.seg{display:flex;gap:4px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:3px;box-shadow:var(--shadow)}
-.seg a{padding:5px 12px;border-radius:7px;font-size:13.5px;color:var(--muted);text-decoration:none;white-space:nowrap;font-weight:500}
-.seg a.on{background:var(--accent);color:#fff}
-.seg a:not(.on):hover{background:var(--accent-soft);color:var(--accent)}
-main{max-width:860px;margin:0 auto;padding:28px 20px 0}
-.doc{display:none;background:var(--card);border:1px solid var(--line);border-radius:14px;
-  padding:44px 48px 52px;box-shadow:var(--shadow)}
-.doc.on{display:block}
-.doc h1{font-size:25px;line-height:1.5;margin:0 0 26px;padding-bottom:18px;border-bottom:1px solid var(--line);letter-spacing:.2px}
-.doc h2{font-size:17.5px;margin:34px 0 10px;padding-left:12px;border-left:3px solid var(--accent);line-height:1.6}
-.doc h2:first-of-type{margin-top:0}
-.doc p{margin:0 0 12px;color:var(--text);text-align:justify}
-.doc ol,.doc ul{padding-left:22px}
-.toc{background:var(--accent-soft);border:1px solid var(--line);border-radius:10px;padding:14px 18px 12px;margin:0 0 30px}
-.toc-t{margin:0 0 6px;font-size:12.5px;font-weight:700;color:var(--accent);letter-spacing:1px;text-transform:uppercase}
-.toc ul{margin:0;padding:0;list-style:none;columns:2;column-gap:26px}
-.toc li{font-size:13.5px;color:var(--muted);line-height:1.85;break-inside:avoid}
-.ph{background:var(--ph-bg);border-bottom:1px dashed var(--ph-line);color:var(--ph-text);
-  padding:1px 5px;border-radius:4px;font-weight:600;white-space:nowrap}
-footer{max-width:860px;margin:0 auto;padding:26px 20px 40px;color:var(--muted);font-size:12.5px;
-  border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between}
-footer a{color:inherit}
-@media (max-width:640px){
-  .doc{padding:26px 20px 34px;border-radius:12px}
-  .doc h1{font-size:20px}.doc h2{font-size:16px}
-  .toc ul{columns:1}
-  .hd{padding:10px 14px;row-gap:8px}
-  .spacer{display:none}
-  .seg{flex:1 1 46%}
-  .seg a{flex:1 1 auto;text-align:center;padding:6px 4px;font-size:13px}
-}
-@media print{
-  header,footer,.toc{display:none!important}
-  body{background:#fff;font-size:11.5pt;line-height:1.75}
-  .doc{display:none;border:0;box-shadow:none;padding:0}
-  .doc.on{display:block}
-  .doc h2{page-break-after:avoid}
-  .doc p{page-break-inside:avoid}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="meta.titlePrivacy">隐私政策 - 手持弹幕</title>
+  <meta name="description" content="手持弹幕隐私政策：说明我们如何处理你输入的文字、设备信息与系统权限，以及你可以如何管理这些数据。">
+  <meta name="theme-color" content="#000000">
+  <meta name="robots" content="noindex,follow">
+  <link rel="icon" type="image/png" href="./assets/img/logo.png">
+  <link rel="stylesheet" href="./assets/css/base.css">
+  <link rel="stylesheet" href="./assets/css/content.css">
+  <link rel="stylesheet" href="./assets/css/pages.css">
 </head>
-<body>
-<header>
-  <div class="hd">
-    <a class="brand" href="/ledbanner-site/index.html"><svg width='28' height='28' viewBox='0 0 28 28' xmlns='http://www.w3.org/2000/svg'><rect width='28' height='28' rx='7' fill='#2f6feb'/><rect x='5' y='9.5' width='4' height='9' rx='1.2' fill='#fff'/><rect x='11' y='9.5' width='4' height='9' rx='1.2' fill='#fff' opacity='.72'/><rect x='17' y='9.5' width='6' height='9' rx='1.2' fill='#fff'/></svg><span>手持弹幕 <small>LED Banner</small></span></a>
-    <div class="spacer"></div>
-    <nav class="seg" id="langSeg" aria-label="语言 / Language">
-      <a href="#zh" data-lang="zh">中文</a>
-      <a href="#en" data-lang="en">English</a>
-    </nav>
+
+<body data-page="privacy">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <header class="site-nav" id="siteNav">
+    <div class="container site-nav__inner">
+      <a class="brand" href="./index.html" data-i18n-attr="aria-label:brand.homeAria" aria-label="手持弹幕 首页">
+        <img class="brand__logo" src="./assets/img/logo.png" data-i18n-attr="alt:brand.logoAlt" alt="手持弹幕 Logo" width="40" height="40">
+        <span class="brand__name" data-i18n="brand.name">手持弹幕</span>
+      </a>
+      <nav class="nav-menu" id="navMenu" data-i18n-attr="aria-label:nav.aria" aria-label="主导航">
+        <a class="nav-menu__link" href="./index.html" data-i18n="nav.home">首页</a>
+        <a class="nav-menu__link" href="./index.html#features" data-i18n="nav.features">功能特性</a>
+        <a class="nav-menu__link" href="./index.html#about" data-i18n="nav.about">关于我们</a>
+      </nav>
+      <a class="btn btn--solid btn--sm nav-cta" href="./index.html#download" data-store="ios" data-i18n="nav.cta">立即下载</a>
+      <div class="lang-switch" id="langToggle" role="group" data-i18n-attr="aria-label:lang.aria" aria-label="切换语言"><button type="button" data-lang="zh" data-i18n="lang.zh" data-i18n-attr="title:lang.zh.name,aria-label:lang.zh.name" title="简体中文" aria-label="简体中文">中</button><button type="button" data-lang="en" data-i18n="lang.en" data-i18n-attr="title:lang.en.name,aria-label:lang.en.name" title="英语" aria-label="英语">EN</button><button type="button" data-lang="ja" data-i18n="lang.ja" data-i18n-attr="title:lang.ja.name,aria-label:lang.ja.name" title="日语" aria-label="日语">日</button><button type="button" data-lang="ko" data-i18n="lang.ko" data-i18n-attr="title:lang.ko.name,aria-label:lang.ko.name" title="韩语" aria-label="韩语">韩</button></div>
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navMenu"
+        data-i18n-attr="aria-label:nav.toggleAria" aria-label="打开导航菜单">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" data-i18n-attr="aria-label:breadcrumb.aria" aria-label="面包屑">
+          <a href="./index.html" data-i18n="nav.home">首页</a><span>/</span><span data-i18n="footer.privacy">隐私政策</span>
+        </nav>
+        <h1 class="page-hero__title" data-i18n="footer.privacy">隐私政策</h1>
+        <p class="page-hero__desc">
+          <span data-i18n="page.privacyDesc">我们尽可能少地收集信息。你输入的文字只留在你的设备上，我们不会读取、上传或将其用于任何其他用途。</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="page-body page-body--tight">
+      <div class="container">
+        <article class="legal">
+          <p class="legal__updated">最近更新：2026 年 10 月 14 日 ｜ 生效日期：2026 年 10 月 14 日</p>
+
+          <div class="legal__lead">
+            本政策适用于「手持弹幕」移动应用及相关网页（以下统称「本服务」）。本服务由
+            手持弹幕的独立开发者（以下简称「我们」）个人开发并运营。
+            请在使用本服务前仔细阅读本政策。如你不同意本政策的任何内容，请停止使用本服务。
+          </div>
+
+          <div class="legal__nav">
+            <a class="chip" href="#s1">信息收集</a>
+            <a class="chip" href="#s2">权限说明</a>
+            <a class="chip" href="#s3">第三方服务</a>
+            <a class="chip" href="#s4">你的权利</a>
+            <a class="chip" href="#s5">联系我们</a>
+          </div>
+
+          <div class="rich">
+            <h3>一、我们收集与不收集的信息</h3>
+            <p>
+              本服务的核心功能是把你输入的文字渲染成滚动弹幕。这些文字内容<strong>仅保存在你的设备本地</strong>，
+              用于生成屏幕显示效果，我们不会上传、读取或将其用于其他任何用途。为保障基础运行与体验，我们可能处理以下信息：
+            </p>
+            <table>
+              <thead>
+                <tr>
+                  <th>信息类型</th>
+                  <th>是否处理</th>
+                  <th>用途与说明</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>你输入的弹幕文字</strong></td>
+                  <td>仅本地</td>
+                  <td>用于生成显示内容，不上传、不收集、不对外提供。</td>
+                </tr>
+                <tr>
+                  <td><strong>设备与系统信息</strong></td>
+                  <td>可能处理</td>
+                  <td>设备型号、操作系统版本、应用版本、系统语言，用于兼容性适配与崩溃排查。</td>
+                </tr>
+                <tr>
+                  <td><strong>使用行为统计</strong></td>
+                  <td>可能处理</td>
+                  <td>功能开启次数等聚合指标，用于判断功能价值与优化方向，不用于识别个人身份。</td>
+                </tr>
+                <tr>
+                  <td><strong>账号信息</strong></td>
+                  <td>不收集</td>
+                  <td>使用本服务无需注册账号，我们不会收集你的手机号、邮箱或社交账号。</td>
+                </tr>
+                <tr>
+                  <td><strong>相册与媒体文件</strong></td>
+                  <td>仅在你主动选择时</td>
+                  <td>当你选择本地音乐作为背景音乐时才会读取，读取内容不会上传。</td>
+                </tr>
+                <tr>
+                  <td><strong>精确位置信息</strong></td>
+                  <td>不收集</td>
+                  <td>本服务不申请、不读取定位权限。</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3 id="s2">二、系统权限说明</h3>
+            <p>本服务仅在实现对应功能所必需的范围内申请系统权限，你可以在系统设置中随时关闭：</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>权限</th>
+                  <th>使用场景</th>
+                  <th>是否必需</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>屏幕常亮 / 修改显示设置</strong></td>
+                  <td>展示弹幕时保持屏幕不自动息屏。</td>
+                  <td>可选，关闭后仍可正常使用</td>
+                </tr>
+                <tr>
+                  <td><strong>读取本地媒体 / 音频</strong></td>
+                  <td>为弹幕设置背景音乐。</td>
+                  <td>可选</td>
+                </tr>
+                <tr>
+                  <td><strong>网络访问</strong></td>
+                  <td>加载公告内容、检查版本更新。</td>
+                  <td>可选，核心功能可离线使用</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>若你拒绝授予上述可选权限，仅对应功能不可用，不影响弹幕的制作与展示。</p>
+
+            <!-- 若应用未接入任何广告或统计分析服务，请删除本节 -->
+            <h3 id="s3">三、第三方服务</h3>
+            <p>
+              本服务可能接入应用商店提供的分发与统计能力，以及第三方广告、崩溃分析等 SDK。
+              这些第三方服务可能收集设备标识符、粗略位置（由 IP 推断，通常精确到城市级别）与广告交互数据，
+              用于广告展示、效果统计与故障排查。相关数据由对应第三方按其自身隐私政策处理，
+              我们仅会在必要范围内进行配置，不参与其数据的具体处理过程。
+            </p>
+            <p>
+              我们不会向任何第三方出售你的个人信息。仅在法律法规要求、司法机关或监管机构依法提出要求时，
+              我们才可能依法提供必要信息。
+            </p>
+
+            <h3>四、信息的存储与保护</h3>
+            <p>
+              你的弹幕文字等创作内容保存在设备本地，卸载应用后即被清除。对于确需上传的有限设备信息，
+              我们在传输过程中采用加密方式传输，并仅保留实现上述目的所必需的最短期限。
+            </p>
+
+            <h3>五、未成年人保护</h3>
+            <p>
+              本服务不面向未满 14 周岁的儿童单独提供服务。若你是未成年人，请在监护人指导下使用本服务，
+              并请监护人阅读本政策。我们不会主动收集未成年人的个人信息；如发现相关情况，我们会尽快删除。
+            </p>
+
+            <h3 id="s4">六、你的权利</h3>
+            <p>在法律法规允许的范围内，你对自己的个人信息享有以下权利：</p>
+            <ul>
+              <li><strong>访问与更正</strong>：你可以在应用内查看并修改自己创作的弹幕内容。</li>
+              <li><strong>删除</strong>：删除应用内内容或卸载应用，即可清除保存在本机的全部创作数据。</li>
+              <li><strong>撤回同意</strong>：你可以在系统设置中关闭已授予的权限，或在设备设置中限制广告跟踪。</li>
+              <li><strong>注销</strong>：本服务无需注册账号，因此不存在账号注销流程；卸载应用即等同于终止使用。</li>
+            </ul>
+            <p>如需行使上述权利或咨询相关问题，可通过本政策末尾的联系方式与我们取得联系。</p>
+
+            <h3>七、本政策的更新</h3>
+            <p>
+              我们可能因功能调整或法律法规变化而更新本政策。更新后的政策将在本页面发布，并同步更新页面顶部的
+              「最近更新」日期。若变更会实质性影响你的权利，我们会通过应用内提示等显著方式另行告知。
+            </p>
+
+            <h3 id="s5">八、联系我们</h3>
+            <p>
+              如果你对本政策有任何疑问、意见或投诉，或希望行使上述权利，欢迎通过以下方式联系我们：
+            </p>
+            <ul>
+              <li>电子邮箱：<a data-legal="email" href="mailto:cghledtech@outlook.com">cghledtech@outlook.com</a></li>
+              <li>开发者：<span data-i18n="footer.developer">个人开发者</span></li>
+            </ul>
+            <p>我们会在收到你的请求后尽快处理并回复。</p>
+          </div>
+
+          <div class="article__more">
+            <a class="btn btn--ghost" href="https://ghuniversitylab.github.io/terms.html" target="_blank" rel="noopener">阅读《用户协议》</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <div class="brand">
+            <img class="brand__logo" src="./assets/img/logo.png" alt="" width="40" height="40">
+            <span class="brand__name" data-i18n="brand.name">手持弹幕</span>
+          </div>
+          <p class="site-footer__slogan" data-i18n="footer.slogan">
+            好玩有趣的打 CALL 神器。把手机变成 LED 显示屏，随时亮出你想说的话。
+          </p>
+        </div>
+        <div class="site-footer__cols">
+          <div class="site-footer__col">
+            <h4 data-i18n="footer.product">产品</h4>
+            <a href="./index.html#features" data-i18n="nav.features">功能特性</a>
+            <a href="./index.html#download" data-i18n="footer.downloadApp">下载应用</a>
+          </div>
+          <div class="site-footer__col">
+            <h4 data-i18n="footer.support">支持</h4>
+            <a data-legal="email" href="mailto:cghledtech@outlook.com" data-i18n="footer.email">联系邮箱</a>
+          </div>
+          <div class="site-footer__col">
+            <h4 data-i18n="footer.aboutCol">关于</h4>
+            <a href="./index.html#about" data-i18n="nav.about">关于我们</a>
+            <a href="https://ghuniversitylab.github.io/terms.html" target="_blank" rel="noopener" data-i18n="footer.terms">用户协议</a>
+            <a href="https://ghuniversitylab.github.io/privacy.html" target="_blank" rel="noopener" data-i18n="footer.privacy">隐私政策</a>
+          </div>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <div class="site-footer__legal">
+          <a href="https://ghuniversitylab.github.io/terms.html" target="_blank" rel="noopener" data-i18n="footer.terms">用户协议</a>
+          <a href="https://ghuniversitylab.github.io/privacy.html" target="_blank" rel="noopener" data-i18n="footer.privacy">隐私政策</a>
+          <a href="./sitemap.xml" data-i18n="footer.sitemap">网站地图</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="float-dock" id="floatDock">
+    <button class="float-btn" id="backTop" type="button" data-i18n-attr="aria-label:float.backTopAria" aria-label="回到顶部">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 5.5 4.5 13l1.4 1.4L11 9.3V20h2V9.3l5.1 5.1L19.5 13z" />
+      </svg>
+    </button>
   </div>
-</header>
-<main>
-<section class="doc" id="zh" lang="zh-CN">
-<h1>Led Banner 隐私政策</h1>
-<p>更新日期：2026年10月20日。运营主体：ganghua chen（App Store Connect 登记名称）；联系邮箱：<a href="mailto:cghledtech@outlook.com">cghledtech@outlook.com</a>。</p>
-<h2>1. 本应用与账号</h2>
-<p>Led Banner 提供弹幕编辑、全屏展示、应援灯光、作品保存和图片/GIF/视频导出。本应用不提供自建账号注册、密码登录或注册码服务。会员购买、订阅和恢复由您的 Apple 账户及 App Store 管理；我们不会获得您的 Apple 账户密码、银行卡号或支付凭证中的完整付款资料。</p>
-<h2>2. 保存在设备上的内容与权限</h2>
-<p>您输入的灯牌文字、作品、模板设置及导入照片保存在设备的 App 存储空间。我们的业务统计不上传这些文字、照片、音频或导出文件。系统备份和 iCloud 备份由您的设备设置决定。</p>
-<p>选图使用系统照片选择器。照片保存、麦克风和摄像头/闪光灯相关能力仅在使用相应功能时按系统要求申请权限；声音响应使用麦克风分析声音强弱，不用于上传录音。您可在系统设置中管理权限。导出分享由您选择接收应用或服务，接收方按其规则处理文件。</p>
-<h2>3. 配置、会员和必要网络请求</h2>
-<p>应用通过 HTTPS 下载经签名验证的产品配置及会员页图片，并通过 StoreKit 查询商品价格、购买记录及会员权益。隐私选择前会发起一次不携带 Cookie、设备标识或业务事件的 HEAD 网络请求，用于完成系统网络访问提示；服务提供方仍可能接收网络通信所必需的 IP 地址。拒绝使用统计不影响这些必要功能。</p>
-<h2>4. 可选使用统计和诊断</h2>
-<p>首次使用时，您可以选择是否允许使用统计；不同意也可继续使用并同步会员权益。只有您同意且产品配置允许统计时，应用才初始化友盟统计/性能组件并发送自有业务事件。</p>
-<p>自有业务日志可能包含 IDFV、应用安装 UUID、事件会话标识、应用版本与运行环境、所用功能类别和模板编号、会员状态、会员页入口，以及购买套餐、已验证交易金额和币种。用途是了解功能使用、购买转化和改善产品，不包含作品文字、照片、密码、银行卡资料或完整收据。</p>
-<p>友盟组件用于使用分析和稳定性诊断，可能处理设备/应用信息、网络信息（包括 IP 地址）、SDK 标识、崩溃和卡顿、启动、内存及页面性能信息。当前集成关闭友盟 ASA/SKAN 归因、进端采集、网络请求内容采集、JavaScript 桥内容采集和应用日志采集。本应用未接入广告投放，也不主动读取 IDFA；当前产品配置未启用 Apple Ads 归因。</p>
-<h2>5. 第三方服务</h2>
-<ul><li>Apple / App Store：商品、购买、恢复和订阅管理，适用 <a href="https://www.apple.com/legal/privacy/">Apple 隐私政策</a>。</li>
-<li>友盟移动统计及 U-APM：运营方为友盟同欣（北京）科技有限公司；用于前述可选分析与性能诊断，适用 <a href="https://www.umeng.com/page/policy">友盟隐私政策</a>。</li>
-<li>GitHub Pages：托管官网、政策、加密配置和部分素材，访问时可能产生服务方的网络访问日志，适用 <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub 隐私声明</a>。</li></ul>
-<p>我们不会将您的灯牌内容或业务统计出售给数据经纪商。第三方自行处理的数据及保存安排以其政策为准。</p>
-<h2>6. 反馈、保存与您的选择</h2>
-<p>意见反馈先保存为本地草稿。只有您在系统邮件界面确认发送后，我们才会收到邮件地址、您填写的内容，以及您选择附带的应用/iOS 版本；用于回复问题和提供支持。请不要在反馈中填写密码或完整付款凭据。</p>
-<p>本地作品可在应用中管理，卸载应用会移除应用的本地存储；设备备份副本需按系统设置管理。网络数据仅在提供服务、处理请求及履行适用义务所需期间保存。</p>
-<p>您可在首次提示中拒绝可选统计，管理系统权限，或停止使用、卸载应用。如需了解、访问、更正、删除已提交的信息，或提出撤回授权请求，请联系上述邮箱并提供核验请求所必需的信息。我们将按适用要求处理；无需提供本应用账号或密码，因为本应用不存在自建账号。</p>
-<h2>7. 安全与政策更新</h2>
-<p>网络配置采用 HTTPS、加密和签名校验，购买使用 StoreKit 验证；这些措施不意味着任何系统绝对安全。政策变更会更新本页日期；新增需要授权的数据用途时，会先提供说明并取得所需授权。</p>
-</section>
-<section class="doc" id="en" lang="en">
-<h1>Led Banner Privacy Policy</h1>
-<p>Updated October 20, 2026. Operator: ganghua chen, the legal entity registered in App Store Connect. Contact: <a href="mailto:cghledtech@outlook.com">cghledtech@outlook.com</a>.</p>
-<h2>1. The app and accounts</h2>
-<p>Led Banner provides banner editing, fullscreen displays, cheering lights, saved designs and image/GIF/video exports. It has no app-owned account registration, password login or registration-code service. Apple and the App Store manage membership purchases, subscriptions and restoration. We do not receive your Apple account password, card number or full payment credentials.</p>
-<h2>2. On-device content and permissions</h2>
-<p>Your banner text, designs, settings and imported photos are stored in the app's on-device storage. Our business analytics do not upload this text, photos, audio or exported files. System and iCloud backups depend on your device settings.</p>
-<p>Photo import uses the system photo picker. Photo saving, microphone and camera/flash capabilities request system permissions when the corresponding feature is used. Sound-responsive effects analyze sound levels without uploading recordings. Manage permissions in system settings. When you share an export, the destination you choose handles it under its own rules.</p>
-<h2>3. Configuration, membership and necessary requests</h2>
-<p>The app downloads signed product configuration and membership images over HTTPS, and uses StoreKit to obtain product prices, purchases and entitlements. Before the privacy choice, one HEAD request helps complete the system network-access prompt. It carries no cookies, device identifiers or business events; a network service may still receive the IP address needed for communication. Declining analytics does not disable these necessary functions.</p>
-<h2>4. Optional analytics and diagnostics</h2>
-<p>At first use, you can choose whether to allow analytics. You can continue using the app and synchronize membership without consenting. Umeng analytics/performance components and our business-event reporting start only with your consent and an enabled product analytics setting.</p>
-<p>Our business logs may contain IDFV, an app installation UUID, event session identifiers, app version and environment, feature categories and template numbers, membership status, membership-page entry points, purchased plans, and verified transaction amounts and currency. These support usage analysis, conversion measurement and product improvements. They do not contain your banner content, photos, passwords, card details or full receipts.</p>
-<p>Umeng may process device/app and network information (including IP address), SDK identifiers, crashes, stalls, launch, memory and page-performance data for optional analytics and stability diagnostics. This integration disables Umeng ASA/SKAN attribution, inbound collection, network request-content capture, JavaScript bridge-content capture and application-log capture. The app does not serve ads or actively read IDFA; Apple Ads attribution is disabled in the current product configuration.</p>
-<h2>5. Service providers</h2>
-<ul><li>Apple / App Store: products, purchases, restoration and subscription management; see <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>.</li>
-<li>Umeng mobile analytics and U-APM, operated by Umeng Tongxin (Beijing) Technology Co., Ltd.: optional analytics and diagnostics described above; see <a href="https://www.umeng.com/page/policy">Umeng's privacy policy</a>.</li>
-<li>GitHub Pages: website, policies, encrypted configuration and some assets; requests may generate provider access logs. See the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub privacy statement</a>.</li></ul>
-<p>We do not sell your banner content or business analytics to data brokers. Providers' independent processing and retention are governed by their policies.</p>
-<h2>6. Feedback, retention and choices</h2>
-<p>Feedback begins as a local draft. We receive your email address, message and any app/iOS version information you choose to include only after you confirm sending in the system mail interface. We use it to respond and provide support. Do not include passwords or full payment credentials.</p>
-<p>Manage local designs in the app. Uninstalling removes app-local storage; manage backup copies through system settings. Network data is retained only as long as needed to provide services, handle requests and meet applicable obligations.</p>
-<p>You may decline optional analytics at the initial prompt, manage device permissions, stop using or uninstall the app. For information, access, correction, deletion or a request to withdraw authorization, contact the email above with the information needed to verify your request. We handle requests as required. No app account or password is needed because the app does not create its own accounts.</p>
-<h2>7. Security and updates</h2>
-<p>Configuration uses HTTPS, encryption and signature verification, and purchases use StoreKit verification. No system is absolutely secure. Changes update the date on this page; new purposes requiring authorization will be explained and the necessary authorization obtained first.</p>
-</section>
-</main>
-<footer>
-  <span>© <span id="yr">2026</span> ganghua chen · Led Banner</span>
-  <span><a href="/ledbanner-site/index.html">首页</a> · <a href="/terms.html">用户协议 / EULA</a></span>
-</footer>
-<script>
-(function(){
-  var docs=document.querySelectorAll('.doc');
-  var langA=document.querySelectorAll('#langSeg a');
-  function apply(){
-    var h=(location.hash||'').replace('#','');
-    if(h!=='zh'&&h!=='en'){ h='zh'; history.replaceState(null,'','#zh'); }
-    docs.forEach(function(d){ d.classList.toggle('on', d.id===h); });
-    langA.forEach(function(a){ a.classList.toggle('on', a.dataset.lang===h); });
-    document.documentElement.lang = (h==='zh')?'zh-CN':'en';
-    document.title = (h==='zh'?'手持弹幕软件运营方隐私政策':'Privacy Policy of the Operator of LED Banner')+' · 手持弹幕 LED Banner';
-  }
-  window.addEventListener('hashchange',apply);
-  apply();
-  document.getElementById('yr').textContent=new Date().getFullYear();
-})();
-</script>
+
+  <script src="./assets/js/site-data.js"></script>
+  <script src="./assets/js/i18n.js"></script>
+  <script src="./assets/js/main.js"></script>
 </body>
+
 </html>
+
+
+
+
+
