@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- ⚠️ 当前域名按隐私政策/用户协议的同源地址推定为 https://ghuniversitylab.github.io
-     若官网实际部署在别的域名（含自定义域名），请把下面 loc 与 robots.txt 一起改掉 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ghuniversitylab.github.io/index.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <loc>https://ghuniversitylab.github.io/ledbanner-site/index.html</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>

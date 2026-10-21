@@ -1,234 +1,195 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-i18n="meta.titleProtocol">用户协议 - 手持弹幕</title>
-  <meta name="description" content="手持弹幕用户协议：说明服务内容、使用许可与限制、用户内容责任、知识产权与免责声明。">
-  <meta name="theme-color" content="#000000">
-  <meta name="robots" content="noindex,follow">
-  <link rel="icon" type="image/png" href="./assets/img/logo.png">
-  <link rel="stylesheet" href="./assets/css/base.css">
-  <link rel="stylesheet" href="./assets/css/content.css">
-  <link rel="stylesheet" href="./assets/css/pages.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>手持弹幕 LED Banner · 用户协议 / EULA</title>
+<meta name="description" content="手持弹幕（LED Banner）用户协议（EULA），提供简体中文与 English 两个版本。">
+<meta name="theme-color" content="#2f6feb">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Crect width='28' height='28' rx='7' fill='%232f6feb'/%3E%3Crect x='5' y='9.5' width='4' height='9' rx='1.2' fill='%23fff'/%3E%3Crect x='11' y='9.5' width='4' height='9' rx='1.2' fill='%23fff' opacity='.72'/%3E%3Crect x='17' y='9.5' width='6' height='9' rx='1.2' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+:root{
+  --bg:#f6f7f9; --card:#ffffff; --text:#1c1f23; --muted:#5d646e;
+  --line:#e3e6ea; --accent:#2f6feb; --accent-soft:#eaf1fe;
+  --ph-bg:#fff7e6; --ph-line:#e0a32e; --ph-text:#8a5b00;
+  --shadow:0 1px 2px rgba(16,24,40,.04),0 8px 24px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#14161a;--card:#1c1f24;--text:#e8eaed;--muted:#a2a9b4;--line:#2c3138;
+        --accent:#6c9bff;--accent-soft:#1f2a3d;--ph-bg:#33280f;--ph-line:#a97d1f;--ph-text:#e8c477;
+        --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);}
+}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.9;font-size:16px}
+header{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
+@supports (backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px)){
+  header{background:rgba(246,247,249,.86);-webkit-backdrop-filter:saturate(180%) blur(12px);backdrop-filter:saturate(180%) blur(12px)}
+  @media (prefers-color-scheme:dark){header{background:rgba(20,22,26,.86)}}
+}
+.hd{max-width:860px;margin:0 auto;padding:12px 20px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15px;letter-spacing:.2px;text-decoration:none;color:inherit}
+.brand svg{flex:none;border-radius:7px}
+.brand small{font-weight:500;color:var(--muted);font-size:12px}
+.spacer{flex:1 1 auto}
+.seg{display:flex;gap:4px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:3px;box-shadow:var(--shadow)}
+.seg a{padding:5px 12px;border-radius:7px;font-size:13.5px;color:var(--muted);text-decoration:none;white-space:nowrap;font-weight:500}
+.seg a.on{background:var(--accent);color:#fff}
+.seg a:not(.on):hover{background:var(--accent-soft);color:var(--accent)}
+main{max-width:860px;margin:0 auto;padding:28px 20px 0}
+.doc{display:none;background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:44px 48px 52px;box-shadow:var(--shadow)}
+.doc.on{display:block}
+.doc h1{font-size:25px;line-height:1.5;margin:0 0 26px;padding-bottom:18px;border-bottom:1px solid var(--line);letter-spacing:.2px}
+.doc h2{font-size:17.5px;margin:34px 0 10px;padding-left:12px;border-left:3px solid var(--accent);line-height:1.6}
+.doc h2:first-of-type{margin-top:0}
+.doc p{margin:0 0 12px;color:var(--text);text-align:justify}
+.doc ol,.doc ul{padding-left:22px}
+.toc{background:var(--accent-soft);border:1px solid var(--line);border-radius:10px;padding:14px 18px 12px;margin:0 0 30px}
+.toc-t{margin:0 0 6px;font-size:12.5px;font-weight:700;color:var(--accent);letter-spacing:1px;text-transform:uppercase}
+.toc ul{margin:0;padding:0;list-style:none;columns:2;column-gap:26px}
+.toc li{font-size:13.5px;color:var(--muted);line-height:1.85;break-inside:avoid}
+.ph{background:var(--ph-bg);border-bottom:1px dashed var(--ph-line);color:var(--ph-text);
+  padding:1px 5px;border-radius:4px;font-weight:600;white-space:nowrap}
+footer{max-width:860px;margin:0 auto;padding:26px 20px 40px;color:var(--muted);font-size:12.5px;
+  border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between}
+footer a{color:inherit}
+@media (max-width:640px){
+  .doc{padding:26px 20px 34px;border-radius:12px}
+  .doc h1{font-size:20px}.doc h2{font-size:16px}
+  .toc ul{columns:1}
+  .hd{padding:10px 14px;row-gap:8px}
+  .spacer{display:none}
+  .seg{flex:1 1 46%}
+  .seg a{flex:1 1 auto;text-align:center;padding:6px 4px;font-size:13px}
+}
+@media print{
+  header,footer,.toc{display:none!important}
+  body{background:#fff;font-size:11.5pt;line-height:1.75}
+  .doc{display:none;border:0;box-shadow:none;padding:0}
+  .doc.on{display:block}
+  .doc h2{page-break-after:avoid}
+  .doc p{page-break-inside:avoid}
+}
+</style>
 </head>
-
-<body data-page="protocol">
-  <a class="skip-link" href="#main">跳到主要内容</a>
-
-  <header class="site-nav" id="siteNav">
-    <div class="container site-nav__inner">
-      <a class="brand" href="./index.html" data-i18n-attr="aria-label:brand.homeAria" aria-label="手持弹幕 首页">
-        <img class="brand__logo" src="./assets/img/logo.png" data-i18n-attr="alt:brand.logoAlt" alt="手持弹幕 Logo" width="40" height="40">
-        <span class="brand__name" data-i18n="brand.name">手持弹幕</span>
-      </a>
-      <nav class="nav-menu" id="navMenu" data-i18n-attr="aria-label:nav.aria" aria-label="主导航">
-        <a class="nav-menu__link" href="./index.html" data-i18n="nav.home">首页</a>
-        <a class="nav-menu__link" href="./index.html#features" data-i18n="nav.features">功能特性</a>
-        <a class="nav-menu__link" href="./index.html#about" data-i18n="nav.about">关于我们</a>
-      </nav>
-      <a class="btn btn--solid btn--sm nav-cta" href="./index.html#download" data-store="ios" data-i18n="nav.cta">立即下载</a>
-      <div class="lang-switch" id="langToggle" role="group" data-i18n-attr="aria-label:lang.aria" aria-label="切换语言"><button type="button" data-lang="zh" data-i18n="lang.zh" data-i18n-attr="title:lang.zh.name,aria-label:lang.zh.name" title="简体中文" aria-label="简体中文">中</button><button type="button" data-lang="en" data-i18n="lang.en" data-i18n-attr="title:lang.en.name,aria-label:lang.en.name" title="英语" aria-label="英语">EN</button><button type="button" data-lang="ja" data-i18n="lang.ja" data-i18n-attr="title:lang.ja.name,aria-label:lang.ja.name" title="日语" aria-label="日语">日</button><button type="button" data-lang="ko" data-i18n="lang.ko" data-i18n-attr="title:lang.ko.name,aria-label:lang.ko.name" title="韩语" aria-label="韩语">韩</button></div>
-      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navMenu"
-        data-i18n-attr="aria-label:nav.toggleAria" aria-label="打开导航菜单">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
-
-  <main id="main">
-    <section class="page-hero">
-      <div class="container">
-        <nav class="breadcrumb" data-i18n-attr="aria-label:breadcrumb.aria" aria-label="面包屑">
-          <a href="./index.html" data-i18n="nav.home">首页</a><span>/</span><span data-i18n="footer.terms">用户协议</span>
-        </nav>
-        <h1 class="page-hero__title" data-i18n="footer.terms">用户协议</h1>
-        <p class="page-hero__desc">
-          <span data-i18n="page.protocolDesc">使用「手持弹幕」即表示你已阅读并同意本协议。请特别留意关于使用限制与免责说明的条款。</span>
-        </p>
-      </div>
-    </section>
-
-    <section class="page-body page-body--tight">
-      <div class="container">
-        <article class="legal">
-          <p class="legal__updated">最近更新：2026 年 10 月 14 日 ｜ 生效日期：2026 年 10 月 14 日</p>
-
-          <div class="legal__lead">
-            本协议是你与「手持弹幕」的独立开发者（以下简称「我们」）之间就使用
-            「手持弹幕」移动应用及相关网页（以下统称「本服务」）所订立的协议。请在使用前完整阅读本协议。
-          </div>
-
-          <div class="legal__nav">
-            <a class="chip" href="#t2">服务内容</a>
-            <a class="chip" href="#t3">使用限制</a>
-            <a class="chip" href="#t5">知识产权</a>
-            <a class="chip" href="#t6">免责说明</a>
-            <a class="chip" href="#t10">联系我们</a>
-          </div>
-
-          <div class="rich">
-            <h3>一、协议的接受与变更</h3>
-            <p>
-              你下载、安装、启动或以任何方式使用本服务，即视为你已阅读、理解并同意接受本协议的全部条款。
-              若你不同意本协议的任何内容，请立即停止使用并卸载本服务。
-            </p>
-            <p>
-              我们可能根据法律法规变化或服务调整而修订本协议。修订后的协议将在本页面公布并更新顶部日期，
-              自公布之日起生效。若你在协议变更后继续使用本服务，即视为你接受变更后的协议。
-            </p>
-
-            <h3 id="t2">二、服务内容</h3>
-            <p>
-              本服务为你提供将文字渲染为滚动弹幕并在设备屏幕上展示的工具能力，主要包括：文字输入与样式设置、
-              滚动速度与显示方向调节、动效与配色选择、背景音乐播放、全屏展示等。
-            </p>
-            <p>
-              本服务主要以免费形式提供。我们可能根据运营需要调整、增加或下线部分功能，
-              并可能在不另行通知的情况下对服务进行维护或升级。因维护、升级或不可抗力导致的服务中断，
-              我们将在合理范围内尽快恢复。
-            </p>
-
-            <h3 id="t3">三、使用许可与行为限制</h3>
-            <p>在你遵守本协议的前提下，我们授予你一项个人的、非独占的、不可转让的、可撤销的使用许可。你不得：</p>
-            <ul>
-              <li>对本服务进行反向工程、反编译、拆解，或以其他方式尝试获取其源代码；</li>
-              <li>复制、出租、出借、出售、转授权本服务，或将其用于任何商业化再分发；</li>
-              <li>移除、遮蔽或篡改本服务中的版权声明、商标或其他权利标识；</li>
-              <li>利用本服务制作、展示或传播违反法律法规、侵犯他人合法权益的内容；</li>
-              <li>以任何方式干扰、破坏本服务的正常运行，或试图未经授权访问相关系统与数据。</li>
-            </ul>
-
-            <h3>四、你创作与展示的内容</h3>
-            <p>
-              你在本服务中输入、展示的文字内容由你自行负责。你承诺不会利用本服务制作或展示含有下列内容的信息：
-            </p>
-            <ul>
-              <li>违反国家法律法规，或危害国家安全、荣誉和利益的内容；</li>
-              <li>涉及色情、暴力、恐怖、赌博、毒品或其他违法活动的内容；</li>
-              <li>对他人进行侮辱、诽谤、骚扰、威胁，或侵犯他人隐私的内容；</li>
-              <li>侵犯他人知识产权、肖像权、商标权或其他合法权益的内容；</li>
-              <li>虚假、误导性信息，或其他可能造成不良社会影响的内容。</li>
-            </ul>
-            <blockquote>
-              特别提示：在演唱会、体育赛事、集会等公共场所使用本服务时，请遵守场馆规定与当地法律法规，
-              并注意不影响他人观演与通行安全。因你的使用行为引发的后果由你自行承担。
-            </blockquote>
-
-            <h3 id="t5">五、知识产权</h3>
-            <p>
-              本服务的软件、界面设计、图标、文案及相关文档的知识产权归我们或相应权利人所有，
-              受著作权法、商标法及相关法律法规保护。未经书面许可，你不得将其用于本协议约定之外的用途。
-            </p>
-            <p>
-              你输入的文字内容的知识产权归你所有（或归相应权利人所有）。我们不会主张对你创作内容的权利，
-              也不会在未经你同意的情况下将其用于宣传等用途。
-            </p>
-
-            <h3 id="t6">六、免责声明</h3>
-            <p>
-              本服务按「现状」提供。在法律允许的最大范围内，我们不对服务的绝对无中断、无错误或完全满足你的特定需求作出保证。
-              你理解并同意，因下列原因造成的损失，我们在法律允许的范围内不承担责任：
-            </p>
-            <ul>
-              <li>因不可抗力、网络故障、设备故障、系统兼容性问题导致的服务不可用或数据异常；</li>
-              <li>因你未按说明操作，或擅自修改设备设置导致的展示效果差异；</li>
-              <li>因你展示的内容本身引发的任何争议、索赔或法律责任；</li>
-              <li>因第三方服务（如应用商店、广告或统计服务）导致的延迟、错误或中断。</li>
-            </ul>
-
-            <h3>七、服务的变更与终止</h3>
-            <p>
-              你可以随时停止使用并卸载本服务。若你违反本协议或相关法律法规，我们有权在不另行通知的情况下
-              中止或终止向你提供服务，并保留追究相应法律责任的权利。
-            </p>
-
-            <h3>八、未成年人使用</h3>
-            <p>
-              若你为未成年人，应在监护人的陪同下阅读本协议，并在取得监护人同意后使用本服务。
-              监护人应对未成年人使用本服务的行为进行指导与监督。
-            </p>
-
-            <h3>九、法律适用与争议解决</h3>
-            <p>
-              本协议的订立、效力、解释、履行及争议解决均适用中华人民共和国法律（不含冲突法规则）。
-              因本协议或本服务产生的争议，双方应首先友好协商解决；协商不成的，
-              任何一方可向有管辖权的人民法院提起诉讼。
-            </p>
-
-            <h3 id="t10">十、联系我们</h3>
-            <p>如你对本协议有任何疑问，或需要就服务相关事项与我们沟通，可通过以下方式联系：</p>
-            <ul>
-              <li>电子邮箱：<a data-legal="email" href="mailto:cghledtech@outlook.com">cghledtech@outlook.com</a></li>
-              <li>开发者：<span data-i18n="footer.developer">个人开发者</span></li>
-            </ul>
-          </div>
-
-          <div class="article__more">
-            <a class="btn btn--ghost" href="https://ghuniversitylab.github.io/privacy.html" target="_blank" rel="noopener">阅读《隐私政策》</a>
-          </div>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div class="site-footer__grid">
-        <div class="site-footer__brand">
-          <div class="brand">
-            <img class="brand__logo" src="./assets/img/logo.png" alt="" width="40" height="40">
-            <span class="brand__name" data-i18n="brand.name">手持弹幕</span>
-          </div>
-          <p class="site-footer__slogan" data-i18n="footer.slogan">
-            好玩有趣的打 CALL 神器。把手机变成 LED 显示屏，随时亮出你想说的话。
-          </p>
-        </div>
-        <div class="site-footer__cols">
-          <div class="site-footer__col">
-            <h4 data-i18n="footer.product">产品</h4>
-            <a href="./index.html#features" data-i18n="nav.features">功能特性</a>
-            <a href="./index.html#download" data-i18n="footer.downloadApp">下载应用</a>
-          </div>
-          <div class="site-footer__col">
-            <h4 data-i18n="footer.support">支持</h4>
-            <a data-legal="email" href="mailto:cghledtech@outlook.com" data-i18n="footer.email">联系邮箱</a>
-          </div>
-          <div class="site-footer__col">
-            <h4 data-i18n="footer.aboutCol">关于</h4>
-            <a href="./index.html#about" data-i18n="nav.about">关于我们</a>
-            <a href="https://ghuniversitylab.github.io/terms.html" target="_blank" rel="noopener" data-i18n="footer.terms">用户协议</a>
-            <a href="https://ghuniversitylab.github.io/privacy.html" target="_blank" rel="noopener" data-i18n="footer.privacy">隐私政策</a>
-          </div>
-        </div>
-      </div>
-      <div class="site-footer__bottom">
-        <div class="site-footer__legal">
-          <a href="https://ghuniversitylab.github.io/terms.html" target="_blank" rel="noopener" data-i18n="footer.terms">用户协议</a>
-          <a href="https://ghuniversitylab.github.io/privacy.html" target="_blank" rel="noopener" data-i18n="footer.privacy">隐私政策</a>
-          <a href="./sitemap.xml" data-i18n="footer.sitemap">网站地图</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <div class="float-dock" id="floatDock">
-    <button class="float-btn" id="backTop" type="button" data-i18n-attr="aria-label:float.backTopAria" aria-label="回到顶部">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M12 5.5 4.5 13l1.4 1.4L11 9.3V20h2V9.3l5.1 5.1L19.5 13z" />
-      </svg>
-    </button>
+<body>
+<header>
+  <div class="hd">
+    <a class="brand" href="/ledbanner-site/index.html"><svg width='28' height='28' viewBox='0 0 28 28' xmlns='http://www.w3.org/2000/svg'><rect width='28' height='28' rx='7' fill='#2f6feb'/><rect x='5' y='9.5' width='4' height='9' rx='1.2' fill='#fff'/><rect x='11' y='9.5' width='4' height='9' rx='1.2' fill='#fff' opacity='.72'/><rect x='17' y='9.5' width='6' height='9' rx='1.2' fill='#fff'/></svg><span>手持弹幕 <small>LED Banner</small></span></a>
+    <div class="spacer"></div>
+    <nav class="seg" id="langSeg" aria-label="语言 / Language">
+      <a href="#zh" data-lang="zh">中文</a>
+      <a href="#en" data-lang="en">English</a>
+    </nav>
   </div>
-
-  <script src="./assets/js/site-data.js"></script>
-  <script src="./assets/js/i18n.js"></script>
-  <script src="./assets/js/main.js"></script>
+</header>
+<main>
+<section class="doc" id="zh" lang="zh-CN">
+<h1>手持弹幕软件用户协议（EULA）</h1>
+<p>更新日期：2026年10月20日。运营主体：ganghua chen（App Store Connect 登记名称）；联系邮箱：<a href="mailto:cghledtech@outlook.com">cghledtech@outlook.com</a>。</p>
+<nav class="toc"><p class="toc-t">目录</p><ul><li>第一条 软件许可范围</li><li>第二条 订阅会员服务条款（App Store 内购自动续费）</li><li>第三条 知识产权</li><li>第四条 技术支持与担保免责</li><li>第五条 用户行为与合规义务</li><li>第六条 隐私政策</li><li>第七条 第三方索赔处理</li><li>第八条 协议修改</li><li>第九条 适用法律与争议解决</li><li>第十条 其他</li></ul></nav>
+<p>欢迎使用手持弹幕软件（以下简称 “本软件”），本协议是您与手持弹幕软件运营方（以下简称 “我方”）之间关于本软件使用的法律协议。当您下载、安装、复制或使用本软件，即代表您已完整阅读、理解并同意接受本协议全部条款。如您不同意本协议，请不要下载、安装及使用本软件。</p>
+<p>重要声明：本协议仅在您与手持弹幕软件运营方之间成立，并非与苹果公司（Apple Inc.）订立。苹果公司不是本软件的提供方，不对本软件及其内容承担任何责任；本软件的全部产品责任、技术支持、投诉处理均由我方独立承担，Apple 不承担相关责任。Apple 仅作为应用分发平台，为本协议的第三方受益人，有权对您执行本协议相关条款。</p>
+<h2>第一条 软件许可范围</h2>
+<p>1.在您遵守本协议全部条款前提下，我方授予您个人、非独占、不可转让、有限许可使用权，您可在您拥有或实际控制的 Apple 品牌 iPhone、iPad 设备上使用本软件，同时支持 Apple 家庭共享规则允许的使用场景。</p>
+<p>2.许可仅限终端使用权利，软件所有权、著作权始终归手持弹幕软件运营方所有。</p>
+<p>3.您不得实施以下行为：对软件进行反编译、逆向工程、反汇编、解密、篡改软件；复制、分发、出租、转租、售卖、二次授权给第三方；去除、篡改软件内版权、商标标识；将本软件用于非法业务。</p>
+<h2>第二条 订阅会员服务条款（App Store 内购自动续费）</h2>
+<p>1.本软件部分高级功能需要开通会员订阅，订阅服务通过 Apple ID 完成支付，所有扣费、订单记录由 Apple 账户管理。</p>
+<p>2.会员为自动续费模式：订阅周期到期前 24 小时，Apple 会自动从您的 Apple ID 账户扣除下一周期费用；免费试用用户，必须在试用到期前至少 24 小时前往 Apple 账户设置取消订阅，否则会自动扣费。</p>
+<p>3.取消订阅操作仅可在 Apple ID 账户设置内完成，本软件 App 内部不提供取消订阅功能。操作路径：App Store → 账户设置 → 订阅，选择对应项目取消。</p>
+<p>4.订阅到期未续费，全部会员特权自动失效，您不再可以使用会员专属功能。</p>
+<p>5.退款申请统一由 Apple 处理，我方开发者无法直接操作退款；若您有退款诉求，请通过 Apple 官方渠道提交申请。</p>
+<p>6.我方有权调整会员套餐价格，价格变更将通过 App Store 页面公示，已生效订阅周期不受本次调价影响。</p>
+<p>本应用另提供终身会员（非消耗型内购），一次购买后无需续费。商品价格、可用优惠及适用条件以 App Store 购买确认界面为准。</p>
+<h2>第三条 知识产权</h2>
+<p>1.本软件全部代码、界面、图标、文案、素材、商标、UI 设计的著作权、商标权及其他知识产权，均归手持弹幕软件运营方所有。</p>
+<p>2.您使用软件输出、生成的文件、素材，知识产权归属于您本人，但您不得利用本软件生成、处理侵权、违法违规内容。若第三方因您输出的文件发起侵权投诉，全部责任由用户自行承担。</p>
+<h2>第四条 技术支持与担保免责</h2>
+<p>1.本软件的维护更新、技术客户支持全部由我方提供，Apple 无义务为本软件提供任何维护、技术支持服务。</p>
+<p>2.本软件按现状 “原样提供”，我方不做明示或暗示担保，不保证软件绝对无 bug、不间断运行；在法律允许最大范围内，不对因软件使用、故障带来的直接、间接损失承担赔偿责任。</p>
+<p>3.若本软件存在产品质量瑕疵，您可联系 Apple 申请购买价款退款；除此之外，Apple 不承担任何其他担保、赔偿责任，其余全部责任由我方承担。</p>
+<h2>第五条 用户行为与合规义务</h2>
+<p>1.用户保证使用本软件遵守中华人民共和国法律法规，不得利用软件从事侵权、色情、暴力、窃取数据、破坏计算机安全等违法行为。</p>
+<p>2.若我方发现您违反本协议约定，我方有权单方终止您的软件使用许可、关闭会员权限。协议终止后，您必须停止使用软件，并删除设备上全部软件副本。</p>
+<h2>第六条 隐私政策</h2>
+<p>您使用本软件，同时受我方《隐私政策》约束，隐私政策独立文档可访问：<a href="/privacy.html">https://ghuniversitylab.github.io/privacy.html</a>。隐私政策说明我方收集、存储、使用用户数据的全部规则。</p>
+<h2>第七条 第三方索赔处理</h2>
+<p>如发生第三方针对本软件的产品责任、合规、消费者权益、知识产权侵权类索赔，由我方负责处理，Apple 不承担处理义务与赔偿责任。</p>
+<h2>第八条 协议修改</h2>
+<p>我方有权根据业务、法律要求更新本用户协议；更新版本发布在我方官方网页，发布即生效。继续使用软件即代表您接受更新后的协议；如不接受新版本，请停止使用软件。</p>
+<h2>第九条 适用法律与争议解决</h2>
+<p>1.本协议适用中华人民共和国法律。</p>
+<p>2.因本协议产生纠纷，双方优先友好协商；协商不成，提交我方所在地人民法院诉讼解决。</p>
+<h2>第十条 其他</h2>
+<p>1.如果协议中某一条款被认定无效，其余条款仍然完整有效。</p>
+<p>2.您不得将本协议项下权利义务转让给第三方。</p>
+</section>
+<section class="doc" id="en" lang="en">
+<h1>LED Banner End User License Agreement (EULA)</h1>
+<p>Updated October 20, 2026. Operator: ganghua chen, the legal entity registered in App Store Connect. Contact: <a href="mailto:cghledtech@outlook.com">cghledtech@outlook.com</a>.</p>
+<nav class="toc"><p class="toc-t">Contents</p><ul><li>Article 1  Scope of Software License</li><li>Article 2  Subscription Membership Terms (Auto-Renewing In-App Purchase on the App Store)</li><li>Article 3  Intellectual Property</li><li>Article 4  Technical Support and Disclaimer of Warranty</li><li>Article 5  User Conduct and Compliance Obligations</li><li>Article 6  Privacy Policy</li><li>Article 7  Third-Party Claims</li><li>Article 8  Amendment of This Agreement</li><li>Article 9  Governing Law and Dispute Resolution</li><li>Article 10  Miscellaneous</li></ul></nav>
+<p>Welcome to LED Banner (the “Software”). This Agreement is a legal agreement between you and the Operator of LED Banner (the “Operator”, also referred to as “we”, “us” or “our”) regarding your use of the Software. By downloading, installing, copying or using the Software, you confirm that you have read, understood and agreed to be bound by all terms of this Agreement. If you do not agree to this Agreement, please do not download, install or use the Software.</p>
+<p>Important Notice: This Agreement is concluded solely between you and the Operator of LED Banner, and is not concluded with Apple Inc. Apple is not the provider of the Software and assumes no responsibility for the Software or its content. All product liability, technical support and complaint handling in respect of the Software are borne solely by us; Apple assumes no such responsibility. Apple acts only as the application distribution platform and is a third-party beneficiary of this Agreement, and has the right to enforce the relevant terms of this Agreement against you.</p>
+<h2>Article 1  Scope of Software License</h2>
+<p>1. Subject to your compliance with all terms of this Agreement, we grant you a personal, non-exclusive, non-transferable, limited license to use the Software on Apple-branded iPhone and iPad devices that you own or control, including the usage scenarios permitted by Apple’s Family Sharing rules.</p>
+<p>2. The license is limited to the right of end use only. All ownership and copyright in the Software remain vested in the Operator of LED Banner.</p>
+<p>3. You shall not: decompile, reverse engineer, disassemble, decrypt or otherwise tamper with the Software; copy, distribute, rent, sublease, sell or sublicense the Software to any third party; remove or alter any copyright or trademark notices in the Software; or use the Software for any illegal business.</p>
+<h2>Article 2  Subscription Membership Terms (Auto-Renewing In-App Purchase on the App Store)</h2>
+<p>1. Certain premium features of the Software require a membership subscription. The subscription is paid through your Apple ID, and all charges and order records are managed by your Apple account.</p>
+<p>2. The membership renews automatically: within 24 hours before the end of the current subscription period, Apple will automatically charge the fee for the next period to your Apple ID account. Free-trial users must cancel the subscription in Apple account settings at least 24 hours before the trial expires; otherwise the fee will be charged automatically.</p>
+<p>3. Subscriptions can only be cancelled in your Apple ID account settings; the app itself does not provide an in-app cancellation function. How to cancel: App Store → Account Settings → Subscriptions, then select the relevant item and cancel.</p>
+<p>4. If the subscription is not renewed upon expiry, all membership privileges will automatically lapse and you will no longer be able to use members-only features.</p>
+<p>5. All refund requests are handled by Apple; we, as the developer, cannot process refunds directly. If you wish to request a refund, please submit your request through Apple’s official channels.</p>
+<p>6. We reserve the right to adjust membership pricing. Price changes will be published on the App Store page, and any subscription period already in effect will not be affected by the change.</p>
+<p>The app also offers lifetime membership as a non-consumable purchase, with no recurring renewal. Prices, available offers and eligibility are shown on the App Store purchase confirmation screen.</p>
+<h2>Article 3  Intellectual Property</h2>
+<p>1. All copyright, trademark rights and other intellectual property rights in the Software’s code, interfaces, icons, copy, assets, trademarks and UI design are owned by the Operator of LED Banner.</p>
+<p>2. The intellectual property rights in any files or materials output or generated by you using the Software belong to you; however, you must not use the Software to generate or process infringing or unlawful content. If a third party files an infringement complaint in respect of files you output, you shall bear full responsibility.</p>
+<h2>Article 4  Technical Support and Disclaimer of Warranty</h2>
+<p>1. All maintenance, updates and technical customer support for the Software are provided by us. Apple has no obligation to provide any maintenance or technical support for the Software.</p>
+<p>2. The Software is provided “as is”. We make no express or implied warranties and do not guarantee that the Software will be entirely free of bugs or operate uninterrupted. To the maximum extent permitted by law, we shall not be liable for any direct or indirect losses arising from the use of, or any failure of, the Software.</p>
+<p>3. If the Software has a quality defect, you may contact Apple to request a refund of the purchase price; beyond that, Apple assumes no other warranty or liability, and all remaining liability is borne by us.</p>
+<h2>Article 5  User Conduct and Compliance Obligations</h2>
+<p>1. You undertake to comply with the laws and regulations of the People’s Republic of China when using the Software, and you must not use the Software for any illegal activities such as infringement, pornography, violence, data theft or breaches of computer security.</p>
+<p>2. If we discover that you have breached this Agreement, we have the right to unilaterally terminate your license to use the Software and to disable your membership. Upon termination, you must stop using the Software and delete all copies of the Software from your devices.</p>
+<h2>Article 6  Privacy Policy</h2>
+<p>Your use of the Software is also governed by our Privacy Policy, which is available as a separate document at: <a href="/privacy.html">https://ghuniversitylab.github.io/privacy.html</a>. The Privacy Policy sets out all the rules on how we collect, store and use user data.</p>
+<h2>Article 7  Third-Party Claims</h2>
+<p>If any third party brings a claim in respect of the Software relating to product liability, compliance, consumer rights or intellectual property infringement, we will be responsible for handling it, and Apple assumes no obligation to handle such claims or to pay compensation.</p>
+<h2>Article 8  Amendment of This Agreement</h2>
+<p>We reserve the right to update this Agreement in accordance with business and legal requirements. Updated versions will be published on our official website and take effect upon publication. Continued use of the Software constitutes acceptance of the updated Agreement; if you do not accept the new version, please stop using the Software.</p>
+<h2>Article 9  Governing Law and Dispute Resolution</h2>
+<p>1. This Agreement is governed by the laws of the People’s Republic of China.</p>
+<p>2. Any dispute arising from this Agreement shall first be resolved through friendly negotiation; if negotiation fails, the dispute shall be submitted to the people’s court in the place where we are located for resolution through litigation.</p>
+<h2>Article 10  Miscellaneous</h2>
+<p>1. If any provision of this Agreement is held invalid, the remaining provisions shall remain fully valid and effective.</p>
+<p>2. You may not assign your rights or obligations under this Agreement to any third party.</p>
+</section>
+</main>
+<footer>
+  <span>© <span id="yr">2026</span> ganghua chen · Led Banner</span>
+  <span><a href="/ledbanner-site/index.html">首页</a> · <a href="/privacy.html">隐私政策 / Privacy Policy</a></span>
+</footer>
+<script>
+(function(){
+  var docs=document.querySelectorAll('.doc');
+  var langA=document.querySelectorAll('#langSeg a');
+  function apply(){
+    var h=(location.hash||'').replace('#','');
+    if(h!=='zh'&&h!=='en'){ h='zh'; history.replaceState(null,'','#zh'); }
+    docs.forEach(function(d){ d.classList.toggle('on', d.id===h); });
+    langA.forEach(function(a){ a.classList.toggle('on', a.dataset.lang===h); });
+    document.documentElement.lang = (h==='zh')?'zh-CN':'en';
+    document.title = (h==='zh'?'手持弹幕软件用户协议（EULA）':'LED Banner End User License Agreement (EULA)')+' · 手持弹幕 LED Banner';
+  }
+  window.addEventListener('hashchange',apply);
+  apply();
+  document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+</script>
 </body>
-
 </html>
-
-
-
-
-
